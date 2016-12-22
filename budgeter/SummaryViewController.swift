@@ -1,5 +1,5 @@
 //
-//  TabBarController.swift
+//  SummaryViewController.swift
 //  budgeter
 //
 //  Created by Kevin Maloles on 22/12/2016.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TabBarController: UIViewController {
+class SummaryViewController: UIViewController {
     override func viewDidLoad() {
         
     }

@@ -1,0 +1,20 @@
+PODS:
+  - ENSwiftSideMenu (0.1.1)
+  - Realm (0.103.1):
+    - Realm/Headers (= 0.103.1)
+  - Realm/Headers (0.103.1)
+  - RealmSwift (0.103.1):
+    - Realm (= 0.103.1)
+
+DEPENDENCIES:
+  - ENSwiftSideMenu (~> 0.1.1)
+  - RealmSwift (= 0.103.1)
+
+SPEC CHECKSUMS:
+  ENSwiftSideMenu: a934caefbe811e4925f172009349da4a49901307
+  Realm: 9ed57109332e95bdc48a7caedff80b70c51d5ef4
+  RealmSwift: 56629adb4acd2dc33eb2c8199fe856585dfd3ba3
+
+PODFILE CHECKSUM: ec9c4603f7d59c1a742e419287c32d5e1f9236f8
+
+COCOAPODS: 1.0.0

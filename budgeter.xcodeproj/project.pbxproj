@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3C566D861E0C316F00BC7D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C566D851E0C316F00BC7D22 /* AppDelegate.swift */; };
-		3C566D881E0C316F00BC7D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C566D871E0C316F00BC7D22 /* ViewController.swift */; };
 		3C566D8B1E0C316F00BC7D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C566D891E0C316F00BC7D22 /* Main.storyboard */; };
 		3C566D8E1E0C316F00BC7D22 /* budgeter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C566D8C1E0C316F00BC7D22 /* budgeter.xcdatamodeld */; };
 		3C566D901E0C316F00BC7D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C566D8F1E0C316F00BC7D22 /* Assets.xcassets */; };
 		3C566D931E0C316F00BC7D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C566D911E0C316F00BC7D22 /* LaunchScreen.storyboard */; };
-		3C566D9E1E0C316F00BC7D22 /* budgeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C566D9D1E0C316F00BC7D22 /* budgeterTests.swift */; };
-		3C566DA91E0C316F00BC7D22 /* budgeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C566DA81E0C316F00BC7D22 /* budgeterUITests.swift */; };
+		3CD835B21E0C490600A2D319 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD835B11E0C490600A2D319 /* SummaryViewController.swift */; };
+		6886FA8DEB7C88B97E8BBF38 /* Pods_budgeter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F82B2B1EDEC0CBDEE30BCE /* Pods_budgeter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +34,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13F8171393462FE4CE71B2B3 /* Pods-budgeter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budgeter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budgeter/Pods-budgeter.debug.xcconfig"; sourceTree = "<group>"; };
 		3C566D821E0C316F00BC7D22 /* budgeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budgeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C566D851E0C316F00BC7D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C566D871E0C316F00BC7D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C566D8A1E0C316F00BC7D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C566D8D1E0C316F00BC7D22 /* budgeter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = budgeter.xcdatamodel; sourceTree = "<group>"; };
 		3C566D8F1E0C316F00BC7D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C566D921E0C316F00BC7D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C566D941E0C316F00BC7D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C566D991E0C316F00BC7D22 /* budgeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budgeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C566D9D1E0C316F00BC7D22 /* budgeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = budgeterTests.swift; sourceTree = "<group>"; };
-		3C566D9F1E0C316F00BC7D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C566DA41E0C316F00BC7D22 /* budgeterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budgeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C566DA81E0C316F00BC7D22 /* budgeterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = budgeterUITests.swift; sourceTree = "<group>"; };
-		3C566DAA1E0C316F00BC7D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CD835B11E0C490600A2D319 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		A2226B13662D2D22E51B2830 /* Pods-budgeter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budgeter.release.xcconfig"; path = "Pods/Target Support Files/Pods-budgeter/Pods-budgeter.release.xcconfig"; sourceTree = "<group>"; };
+		E7F82B2B1EDEC0CBDEE30BCE /* Pods_budgeter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_budgeter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6886FA8DEB7C88B97E8BBF38 /* Pods_budgeter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				3C566D841E0C316F00BC7D22 /* budgeter */,
-				3C566D9C1E0C316F00BC7D22 /* budgeterTests */,
-				3C566DA71E0C316F00BC7D22 /* budgeterUITests */,
 				3C566D831E0C316F00BC7D22 /* Products */,
+				B7EAEA0A0C6ECCAEC0A2C5CB /* Pods */,
+				AB6141EE435577D89A058748 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +98,8 @@
 		3C566D841E0C316F00BC7D22 /* budgeter */ = {
 			isa = PBXGroup;
 			children = (
+				3CE3013D1E0C4405004A866F /* Tabs */,
 				3C566D851E0C316F00BC7D22 /* AppDelegate.swift */,
-				3C566D871E0C316F00BC7D22 /* ViewController.swift */,
 				3C566D891E0C316F00BC7D22 /* Main.storyboard */,
 				3C566D8F1E0C316F00BC7D22 /* Assets.xcassets */,
 				3C566D911E0C316F00BC7D22 /* LaunchScreen.storyboard */,
@@ -110,22 +109,29 @@
 			path = budgeter;
 			sourceTree = "<group>";
 		};
-		3C566D9C1E0C316F00BC7D22 /* budgeterTests */ = {
+		3CE3013D1E0C4405004A866F /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				3C566D9D1E0C316F00BC7D22 /* budgeterTests.swift */,
-				3C566D9F1E0C316F00BC7D22 /* Info.plist */,
+				3CD835B11E0C490600A2D319 /* SummaryViewController.swift */,
 			);
-			path = budgeterTests;
+			name = Tabs;
 			sourceTree = "<group>";
 		};
-		3C566DA71E0C316F00BC7D22 /* budgeterUITests */ = {
+		AB6141EE435577D89A058748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C566DA81E0C316F00BC7D22 /* budgeterUITests.swift */,
-				3C566DAA1E0C316F00BC7D22 /* Info.plist */,
+				E7F82B2B1EDEC0CBDEE30BCE /* Pods_budgeter.framework */,
 			);
-			path = budgeterUITests;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7EAEA0A0C6ECCAEC0A2C5CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13F8171393462FE4CE71B2B3 /* Pods-budgeter.debug.xcconfig */,
+				A2226B13662D2D22E51B2830 /* Pods-budgeter.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C566DAD1E0C316F00BC7D22 /* Build configuration list for PBXNativeTarget "budgeter" */;
 			buildPhases = (
+				C56637577B4E00130D686E63 /* 📦 Check Pods Manifest.lock */,
 				3C566D7E1E0C316F00BC7D22 /* Sources */,
 				3C566D7F1E0C316F00BC7D22 /* Frameworks */,
 				3C566D801E0C316F00BC7D22 /* Resources */,
+				E76541D546E280C5DCC4765C /* 📦 Embed Pods Frameworks */,
+				045B18E6D1E47CA97F660A40 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +263,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		045B18E6D1E47CA97F660A40 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-budgeter/Pods-budgeter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C56637577B4E00130D686E63 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E76541D546E280C5DCC4765C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-budgeter/Pods-budgeter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C566D7E1E0C316F00BC7D22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD835B21E0C490600A2D319 /* SummaryViewController.swift in Sources */,
 				3C566D8E1E0C316F00BC7D22 /* budgeter.xcdatamodeld in Sources */,
-				3C566D881E0C316F00BC7D22 /* ViewController.swift in Sources */,
 				3C566D861E0C316F00BC7D22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C566D9E1E0C316F00BC7D22 /* budgeterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C566DA91E0C316F00BC7D22 /* budgeterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +458,7 @@
 		};
 		3C566DAE1E0C316F00BC7D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13F8171393462FE4CE71B2B3 /* Pods-budgeter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = budgeter/Info.plist;
@@ -414,6 +470,7 @@
 		};
 		3C566DAF1E0C316F00BC7D22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2226B13662D2D22E51B2830 /* Pods-budgeter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = budgeter/Info.plist;
@@ -488,6 +545,7 @@
 				3C566DAF1E0C316F00BC7D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C566DB01E0C316F00BC7D22 /* Build configuration list for PBXNativeTarget "budgeterTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +554,7 @@
 				3C566DB21E0C316F00BC7D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C566DB31E0C316F00BC7D22 /* Build configuration list for PBXNativeTarget "budgeterUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +563,7 @@
 				3C566DB51E0C316F00BC7D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

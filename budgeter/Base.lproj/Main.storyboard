@@ -1,25 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CVq-7t-ok5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--SummaryViewController-->
+        <scene sceneID="zQf-aR-RVC">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SummaryViewController" id="CjC-7D-sJC" userLabel="SummaryViewController" customClass="SummaryViewController" customModule="budgeter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="bAO-De-Ugr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ioc-Xl-hc3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="jjM-Nz-ndH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88677603006362915" green="0.90806061029434204" blue="0.38690823316574097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Summary" image="summary tab" id="4kb-Xi-hEO" userLabel="Summary"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfO-qP-qg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="527" y="1373"/>
+        </scene>
+        <!--ExpenseViewController-->
+        <scene sceneID="Z5i-P2-ZrM">
+            <objects>
+                <viewController id="bc5-Az-uz0" userLabel="ExpenseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uu2-rN-chi"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ai-gd-qOy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E97-Pl-4Ax">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94429284334182739" green="0.8118777871131897" blue="0.77308195829391479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Expense" image="add expense" id="6ZK-L6-3Xb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5N-cf-5xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="712"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aXQ-Th-A4N">
+            <objects>
+                <tabBarController id="CVq-7t-ok5" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="TKF-zj-8A0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bc5-Az-uz0" kind="relationship" relationship="viewControllers" id="p4Y-7E-6H0"/>
+                        <segue destination="CjC-7D-sJC" kind="relationship" relationship="viewControllers" id="dUo-jH-Gru"/>
+                        <segue destination="9Xr-uO-vlK" kind="relationship" relationship="viewControllers" id="3Cs-fh-rf7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsw-mg-UEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="1043"/>
+        </scene>
+        <!--ReceiveViewController-->
+        <scene sceneID="ddt-Re-QpL">
+            <objects>
+                <viewController id="9Xr-uO-vlK" userLabel="ReceiveViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fH6-tt-H9T"/>
+                        <viewControllerLayoutGuide type="bottom" id="ash-SG-D3E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pQs-X5-GAn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80136686563491821" green="0.92242395877838135" blue="0.61350429058074951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" image="cash history" id="WMR-fY-TC7"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2B-zM-ptH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="2095"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add expense" width="25" height="25"/>
+        <image name="cash history" width="25" height="25"/>
+        <image name="summary tab" width="25" height="25"/>
+    </resources>
 </document>
