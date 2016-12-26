@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SummaryViewController-->
@@ -24,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="527" y="1373"/>
         </scene>
-        <!--ExpenseViewController-->
+        <!--ExpenseTableViewController-->
         <scene sceneID="Z5i-P2-ZrM">
             <objects>
-                <viewController id="bc5-Az-uz0" userLabel="ExpenseViewController" sceneMemberID="viewController">
+                <viewController id="bc5-Az-uz0" userLabel="ExpenseTableViewController" customClass="ExpenseViewController" customModule="budgeter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uu2-rN-chi"/>
                         <viewControllerLayoutGuide type="bottom" id="8ai-gd-qOy"/>
@@ -35,9 +36,72 @@
                     <view key="view" contentMode="scaleToFill" id="E97-Pl-4Ax">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94429284334182739" green="0.8118777871131897" blue="0.77308195829391479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAB-EL-VUM">
+                                <rect key="frame" x="16" y="28" width="288" height="491"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-yo-Z9F" userLabel="TableView">
+                                        <rect key="frame" x="0.0" y="96" width="288" height="396"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="bc5-Az-uz0" id="zYU-DZ-nmc"/>
+                                            <outlet property="delegate" destination="bc5-Az-uz0" id="q5a-K4-U45"/>
+                                        </connections>
+                                    </tableView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="OMGastos" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ydo-58-UAo">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="e9F-Qj-Od8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYQ-NQ-fve">
+                                        <rect key="frame" x="0.0" y="58" width="288" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3C-BP-3Ub" userLabel="addExpenseButton">
+                                        <rect key="frame" x="0.0" y="60" width="25" height="25"/>
+                                        <state key="normal" backgroundImage="add"/>
+                                        <connections>
+                                            <action selector="onAddExpenseTapped:" destination="bc5-Az-uz0" eventType="touchUpInside" id="b4g-Dc-76I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="centerX" secondItem="Ydo-58-UAo" secondAttribute="centerX" id="Ccl-Ks-xW0"/>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="width" secondItem="Ydo-58-UAo" secondAttribute="width" id="JMl-RY-xag"/>
+                                    <constraint firstItem="Ydo-58-UAo" firstAttribute="centerX" secondItem="GAB-EL-VUM" secondAttribute="centerX" id="MJw-BX-ule"/>
+                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="top" secondItem="wYQ-NQ-fve" secondAttribute="bottom" constant="8" id="MVk-UU-YyS"/>
+                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="centerX" secondItem="GAB-EL-VUM" secondAttribute="centerX" id="Obm-Wk-HbO"/>
+                                    <constraint firstItem="J3C-BP-3Ub" firstAttribute="leading" secondItem="wYQ-NQ-fve" secondAttribute="trailing" constant="-288" id="UvZ-li-gql"/>
+                                    <constraint firstItem="Ydo-58-UAo" firstAttribute="top" secondItem="GAB-EL-VUM" secondAttribute="top" id="WSs-eb-23m"/>
+                                    <constraint firstItem="J3C-BP-3Ub" firstAttribute="centerY" secondItem="wYQ-NQ-fve" secondAttribute="centerY" id="YvX-5z-BDb"/>
+                                    <constraint firstItem="Ydo-58-UAo" firstAttribute="width" secondItem="GAB-EL-VUM" secondAttribute="width" id="bg4-ry-r23"/>
+                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="width" secondItem="GAB-EL-VUM" secondAttribute="width" id="eTX-JC-Wzp"/>
+                                    <constraint firstAttribute="bottom" secondItem="VnF-yo-Z9F" secondAttribute="bottom" constant="-0.5" id="u25-3b-uuD"/>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="top" secondItem="Ydo-58-UAo" secondAttribute="bottom" constant="8" id="zYk-jn-HaP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GAB-EL-VUM" firstAttribute="top" secondItem="Uu2-rN-chi" secondAttribute="bottom" constant="8" id="9Ng-tH-50O"/>
+                            <constraint firstItem="GAB-EL-VUM" firstAttribute="leading" secondItem="E97-Pl-4Ax" secondAttribute="leadingMargin" id="WVW-HY-jwH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GAB-EL-VUM" secondAttribute="trailing" id="e1d-9a-fba"/>
+                            <constraint firstItem="8ai-gd-qOy" firstAttribute="top" secondItem="GAB-EL-VUM" secondAttribute="bottom" id="tYx-Ov-bo9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Expense" image="add expense" id="6ZK-L6-3Xb"/>
+                    <connections>
+                        <outlet property="addExpenseButton" destination="J3C-BP-3Ub" id="PhS-JJ-PfW"/>
+                        <outlet property="expenseText" destination="wYQ-NQ-fve" id="wRo-Bu-anc"/>
+                        <outlet property="tableView" destination="VnF-yo-Z9F" id="Ya2-3G-U6P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5N-cf-5xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80136686563491821" green="0.92242395877838135" blue="0.61350429058074951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" image="cash history" id="WMR-fY-TC7"/>
+                    <tabBarItem key="tabBarItem" title="Budget" image="cash history" id="WMR-fY-TC7"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2B-zM-ptH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,6 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="25" height="25"/>
         <image name="add expense" width="25" height="25"/>
         <image name="cash history" width="25" height="25"/>
         <image name="summary tab" width="25" height="25"/>

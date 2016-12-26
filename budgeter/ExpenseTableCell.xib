@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="norwester.otf">
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H9w-gH-L0Z" customClass="ExpenseTableCell" customModule="budgeter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H9w-gH-L0Z" id="4WP-yx-24e" userLabel="customCell">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Php" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PUo-BZ-mb5" userLabel="expenseText">
+                        <rect key="frame" x="60" y="15" width="252" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="3YW-jE-FOX"/>
+                            <constraint firstAttribute="width" constant="252" id="hgw-Gi-Ccs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="20"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xw2-fh-xha" userLabel="Day">
+                        <rect key="frame" x="0.0" y="7" width="55" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="O0P-rG-Ghj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="20"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07 Nov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqf-O3-MX9" userLabel="Date">
+                        <rect key="frame" x="0.0" y="29" width="55" height="12"/>
+                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="10"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7:00 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-ig-5Ag" userLabel="Time">
+                        <rect key="frame" x="0.0" y="42" width="55" height="12"/>
+                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="10"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xw2-fh-xha" firstAttribute="trailing" secondItem="Ft1-ig-5Ag" secondAttribute="trailing" id="9cX-OK-4mD"/>
+                    <constraint firstItem="dqf-O3-MX9" firstAttribute="leading" secondItem="4WP-yx-24e" secondAttribute="leadingMargin" constant="-8" id="Ayc-Yc-BbS"/>
+                    <constraint firstItem="Ft1-ig-5Ag" firstAttribute="top" secondItem="Xw2-fh-xha" secondAttribute="bottom" constant="10" id="CBr-3l-aZH"/>
+                    <constraint firstItem="PUo-BZ-mb5" firstAttribute="leading" secondItem="dqf-O3-MX9" secondAttribute="trailing" constant="5" id="F9O-gt-lOY"/>
+                    <constraint firstItem="Xw2-fh-xha" firstAttribute="leading" secondItem="dqf-O3-MX9" secondAttribute="leading" id="G4Y-Gl-Sc3"/>
+                    <constraint firstItem="PUo-BZ-mb5" firstAttribute="centerX" secondItem="4WP-yx-24e" secondAttribute="centerX" constant="26" id="Hzs-MN-x7r"/>
+                    <constraint firstItem="PUo-BZ-mb5" firstAttribute="centerY" secondItem="4WP-yx-24e" secondAttribute="centerY" id="KHg-2J-fWy"/>
+                    <constraint firstItem="Xw2-fh-xha" firstAttribute="leading" secondItem="Ft1-ig-5Ag" secondAttribute="leading" id="Z3M-kW-4cl"/>
+                    <constraint firstItem="Xw2-fh-xha" firstAttribute="trailing" secondItem="dqf-O3-MX9" secondAttribute="trailing" id="bzX-Z7-dZd"/>
+                    <constraint firstItem="Xw2-fh-xha" firstAttribute="top" secondItem="4WP-yx-24e" secondAttribute="topMargin" constant="-1" id="frb-ie-cs0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dqf-O3-MX9" secondAttribute="bottom" constant="10.5" id="hk1-oy-tsE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="PUo-BZ-mb5" secondAttribute="bottom" constant="6.5" id="lc3-DU-lf2"/>
+                    <constraint firstItem="PUo-BZ-mb5" firstAttribute="top" secondItem="4WP-yx-24e" secondAttribute="topMargin" constant="7" id="rdj-mK-j17"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="dqf-O3-MX9" id="Top-QA-fAX"/>
+                <outlet property="dayLabel" destination="Xw2-fh-xha" id="uya-5e-Ot2"/>
+                <outlet property="timeLabel" destination="Ft1-ig-5Ag" id="hOD-M7-hQb"/>
+            </connections>
+            <point key="canvasLocation" x="-111" y="383"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0B0A381E11B98D007FE881 /* norwester.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B0A371E11B98D007FE881 /* norwester.otf */; };
+		3C0B0A3A1E11BD20007FE881 /* ExpenseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B0A391E11BD20007FE881 /* ExpenseTableCell.swift */; };
+		3C0B0A401E11C5E5007FE881 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B0A3F1E11C5E5007FE881 /* Extensions.swift */; };
+		3C0B0A431E11CE0E007FE881 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B0A421E11CE0E007FE881 /* DateFormatter.swift */; };
 		3C566D861E0C316F00BC7D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C566D851E0C316F00BC7D22 /* AppDelegate.swift */; };
 		3C566D8B1E0C316F00BC7D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C566D891E0C316F00BC7D22 /* Main.storyboard */; };
 		3C566D8E1E0C316F00BC7D22 /* budgeter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C566D8C1E0C316F00BC7D22 /* budgeter.xcdatamodeld */; };
 		3C566D901E0C316F00BC7D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C566D8F1E0C316F00BC7D22 /* Assets.xcassets */; };
 		3C566D931E0C316F00BC7D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C566D911E0C316F00BC7D22 /* LaunchScreen.storyboard */; };
+		3CAAC4EE1E0C85440015345B /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAC4ED1E0C85440015345B /* ExpenseViewController.swift */; };
+		3CAAC4F11E0C87110015345B /* ExpenseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAAC4F01E0C87110015345B /* ExpenseTableCell.xib */; };
 		3CD835B21E0C490600A2D319 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD835B11E0C490600A2D319 /* SummaryViewController.swift */; };
 		6886FA8DEB7C88B97E8BBF38 /* Pods_budgeter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F82B2B1EDEC0CBDEE30BCE /* Pods_budgeter.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		13F8171393462FE4CE71B2B3 /* Pods-budgeter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budgeter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-budgeter/Pods-budgeter.debug.xcconfig"; sourceTree = "<group>"; };
+		3C0B0A371E11B98D007FE881 /* norwester.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = norwester.otf; sourceTree = "<group>"; };
+		3C0B0A391E11BD20007FE881 /* ExpenseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTableCell.swift; sourceTree = "<group>"; };
+		3C0B0A3F1E11C5E5007FE881 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3C0B0A421E11CE0E007FE881 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3C566D821E0C316F00BC7D22 /* budgeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = budgeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C566D851E0C316F00BC7D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C566D8A1E0C316F00BC7D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +54,8 @@
 		3C566D941E0C316F00BC7D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C566D991E0C316F00BC7D22 /* budgeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budgeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C566DA41E0C316F00BC7D22 /* budgeterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = budgeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAAC4ED1E0C85440015345B /* ExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
+		3CAAC4F01E0C87110015345B /* ExpenseTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseTableCell.xib; sourceTree = "<group>"; };
 		3CD835B11E0C490600A2D319 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		A2226B13662D2D22E51B2830 /* Pods-budgeter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budgeter.release.xcconfig"; path = "Pods/Target Support Files/Pods-budgeter/Pods-budgeter.release.xcconfig"; sourceTree = "<group>"; };
 		E7F82B2B1EDEC0CBDEE30BCE /* Pods_budgeter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_budgeter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,9 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0B0A361E11B93D007FE881 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C0B0A371E11B98D007FE881 /* norwester.otf */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		3C0B0A411E11CE02007FE881 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3C0B0A421E11CE0E007FE881 /* DateFormatter.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		3C566D791E0C316F00BC7D22 = {
 			isa = PBXGroup;
 			children = (
+				3C0B0A361E11B93D007FE881 /* resources */,
 				3C566D841E0C316F00BC7D22 /* budgeter */,
 				3C566D831E0C316F00BC7D22 /* Products */,
 				B7EAEA0A0C6ECCAEC0A2C5CB /* Pods */,
@@ -98,6 +127,7 @@
 		3C566D841E0C316F00BC7D22 /* budgeter */ = {
 			isa = PBXGroup;
 			children = (
+				3C0B0A411E11CE02007FE881 /* Data */,
 				3CE3013D1E0C4405004A866F /* Tabs */,
 				3C566D851E0C316F00BC7D22 /* AppDelegate.swift */,
 				3C566D891E0C316F00BC7D22 /* Main.storyboard */,
@@ -105,14 +135,26 @@
 				3C566D911E0C316F00BC7D22 /* LaunchScreen.storyboard */,
 				3C566D941E0C316F00BC7D22 /* Info.plist */,
 				3C566D8C1E0C316F00BC7D22 /* budgeter.xcdatamodeld */,
+				3C0B0A3F1E11C5E5007FE881 /* Extensions.swift */,
 			);
 			path = budgeter;
+			sourceTree = "<group>";
+		};
+		3CAAC4EF1E0C86F20015345B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3CAAC4F01E0C87110015345B /* ExpenseTableCell.xib */,
+				3C0B0A391E11BD20007FE881 /* ExpenseTableCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		3CE3013D1E0C4405004A866F /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				3CAAC4EF1E0C86F20015345B /* Cells */,
 				3CD835B11E0C490600A2D319 /* SummaryViewController.swift */,
+				3CAAC4ED1E0C85440015345B /* ExpenseViewController.swift */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -243,6 +285,8 @@
 			files = (
 				3C566D931E0C316F00BC7D22 /* LaunchScreen.storyboard in Resources */,
 				3C566D901E0C316F00BC7D22 /* Assets.xcassets in Resources */,
+				3CAAC4F11E0C87110015345B /* ExpenseTableCell.xib in Resources */,
+				3C0B0A381E11B98D007FE881 /* norwester.otf in Resources */,
 				3C566D8B1E0C316F00BC7D22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +361,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CD835B21E0C490600A2D319 /* SummaryViewController.swift in Sources */,
+				3C0B0A401E11C5E5007FE881 /* Extensions.swift in Sources */,
+				3CAAC4EE1E0C85440015345B /* ExpenseViewController.swift in Sources */,
+				3C0B0A431E11CE0E007FE881 /* DateFormatter.swift in Sources */,
+				3C0B0A3A1E11BD20007FE881 /* ExpenseTableCell.swift in Sources */,
 				3C566D8E1E0C316F00BC7D22 /* budgeter.xcdatamodeld in Sources */,
 				3C566D861E0C316F00BC7D22 /* AppDelegate.swift in Sources */,
 			);
