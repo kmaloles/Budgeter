@@ -8,22 +8,29 @@
 
 import Foundation
 import UIKit
+import RealmSwift
+import Realm
 
 class ExpenseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var expenseText: UITextField!
     @IBOutlet weak var addExpenseButton: UIButton!
+    let cellConfigurator = ExpenseCellConfigurator()
     
     var expense = [Int]()
+    let realm = try! Realm()
+    var expenseToPersist = Dictionary<String, AnyObject>()
     
     @IBAction func onAddExpenseTapped(sender: UIButton) {
         addExpense()
     }
+
+    let dbmanager = DBManager.sharedInstance
+    let dateFormatter = DateFormatter.sharedInstance
     
     override func viewDidLoad() {
         tableView.registerNib(ExpenseTableCell.nib(), forCellReuseIdentifier: ExpenseTableCell.reuseIdentifier())
-        
         //Looks for single or multiple taps.
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
@@ -34,6 +41,7 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
         expenseText.leftView = addExpenseButton
         expenseText.leftViewMode = UITextFieldViewMode.Always
         expenseText.clearButtonMode = .WhileEditing
+        expenseText.borderStyle = UITextBorderStyle.RoundedRect
         
         addDoneButtonToKeyboard()
 //        expenseText.addTarget(self, action: #selector(onExpenseFieldTapped), forControlEvents: UIControlEvents.TouchDown)
@@ -51,9 +59,14 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func addExpense(){
         if let value = Int(expenseText.text!){
-            expense.append(value)
+            let date = NSDate()
+            expenseToPersist[expenseToPersist.keyExpense()] = value
+            expenseToPersist[expenseToPersist.keyDate()] = date
+//            expense.append(value)
+            dbmanager.persistExpense(expenseToPersist)
             tableView.reloadData()
-            expenseText.text = ""
+        }else{
+            expenseText.becomeFirstResponder()
         }
         print("Expense count: \(expense.count)")
     }
@@ -72,7 +85,8 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int
     {
-        return expense.count
+//        return expense.count
+        return dbmanager.countExpenses()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -81,8 +95,10 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
 //        cell.delegate = self
 
         let cell:ExpenseTableCell = self.tableView.dequeueReusableCellWithIdentifier(ExpenseTableCell.reuseIdentifier(), forIndexPath: indexPath) as! ExpenseTableCell
-        let item = expense[indexPath.row]
-        cell.textLabel?.text = String(item)
+//         let item = expense[indexPath.row]
+        let expenseItem = dbmanager.getAllExpenses()[indexPath.row]
+        cellConfigurator.configure(expenseItem, cell: cell)
+//        cell.textLabel?.text = String(item)
         return cell
     }
     
@@ -90,4 +106,13 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         print("You selected cell #\(indexPath.row)!")
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
 }

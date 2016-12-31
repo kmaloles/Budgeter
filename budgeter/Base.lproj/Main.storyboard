@@ -5,6 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="norwester.otf">
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--SummaryViewController-->
         <scene sceneID="zQf-aR-RVC">
@@ -40,51 +46,54 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAB-EL-VUM">
                                 <rect key="frame" x="16" y="28" width="288" height="491"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-yo-Z9F" userLabel="TableView">
-                                        <rect key="frame" x="0.0" y="96" width="288" height="396"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="bc5-Az-uz0" id="zYU-DZ-nmc"/>
-                                            <outlet property="delegate" destination="bc5-Az-uz0" id="q5a-K4-U45"/>
-                                        </connections>
-                                    </tableView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="OMGastos" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ydo-58-UAo">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="e9F-Qj-Od8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="27"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYQ-NQ-fve">
-                                        <rect key="frame" x="0.0" y="58" width="288" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYQ-NQ-fve">
+                                        <rect key="frame" x="0.0" y="58" width="288" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HeK-HS-GPt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3C-BP-3Ub" userLabel="addExpenseButton">
-                                        <rect key="frame" x="0.0" y="60" width="25" height="25"/>
+                                        <rect key="frame" x="0.0" y="65" width="25" height="25"/>
                                         <state key="normal" backgroundImage="add"/>
                                         <connections>
                                             <action selector="onAddExpenseTapped:" destination="bc5-Az-uz0" eventType="touchUpInside" id="b4g-Dc-76I"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-yo-Z9F" userLabel="TableView">
+                                        <rect key="frame" x="0.0" y="106" width="288" height="385"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="bc5-Az-uz0" id="zYU-DZ-nmc"/>
+                                            <outlet property="delegate" destination="bc5-Az-uz0" id="q5a-K4-U45"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="centerX" secondItem="Ydo-58-UAo" secondAttribute="centerX" id="Ccl-Ks-xW0"/>
-                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="width" secondItem="Ydo-58-UAo" secondAttribute="width" id="JMl-RY-xag"/>
+                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="centerX" secondItem="GAB-EL-VUM" secondAttribute="centerX" id="9x8-Ue-71x"/>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="top" secondItem="Ydo-58-UAo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ak0-or-8BA"/>
                                     <constraint firstItem="Ydo-58-UAo" firstAttribute="centerX" secondItem="GAB-EL-VUM" secondAttribute="centerX" id="MJw-BX-ule"/>
-                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="top" secondItem="wYQ-NQ-fve" secondAttribute="bottom" constant="8" id="MVk-UU-YyS"/>
-                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="centerX" secondItem="GAB-EL-VUM" secondAttribute="centerX" id="Obm-Wk-HbO"/>
-                                    <constraint firstItem="J3C-BP-3Ub" firstAttribute="leading" secondItem="wYQ-NQ-fve" secondAttribute="trailing" constant="-288" id="UvZ-li-gql"/>
+                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="top" secondItem="wYQ-NQ-fve" secondAttribute="bottom" constant="8" id="NAv-nb-Hc4"/>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="leading" secondItem="Ydo-58-UAo" secondAttribute="leading" id="OTO-wF-5QU"/>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="leading" secondItem="J3C-BP-3Ub" secondAttribute="leading" id="Qkq-zd-nou"/>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="centerY" secondItem="J3C-BP-3Ub" secondAttribute="centerY" id="R2Y-1I-B5c"/>
+                                    <constraint firstAttribute="bottom" secondItem="VnF-yo-Z9F" secondAttribute="bottom" id="T1i-yo-Rkx"/>
+                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="width" secondItem="wYQ-NQ-fve" secondAttribute="width" id="T4Z-DT-CHw"/>
                                     <constraint firstItem="Ydo-58-UAo" firstAttribute="top" secondItem="GAB-EL-VUM" secondAttribute="top" id="WSs-eb-23m"/>
-                                    <constraint firstItem="J3C-BP-3Ub" firstAttribute="centerY" secondItem="wYQ-NQ-fve" secondAttribute="centerY" id="YvX-5z-BDb"/>
                                     <constraint firstItem="Ydo-58-UAo" firstAttribute="width" secondItem="GAB-EL-VUM" secondAttribute="width" id="bg4-ry-r23"/>
-                                    <constraint firstItem="VnF-yo-Z9F" firstAttribute="width" secondItem="GAB-EL-VUM" secondAttribute="width" id="eTX-JC-Wzp"/>
-                                    <constraint firstAttribute="bottom" secondItem="VnF-yo-Z9F" secondAttribute="bottom" constant="-0.5" id="u25-3b-uuD"/>
-                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="top" secondItem="Ydo-58-UAo" secondAttribute="bottom" constant="8" id="zYk-jn-HaP"/>
+                                    <constraint firstItem="wYQ-NQ-fve" firstAttribute="trailing" secondItem="Ydo-58-UAo" secondAttribute="trailing" id="iKf-zp-CFM"/>
                                 </constraints>
                             </view>
                         </subviews>

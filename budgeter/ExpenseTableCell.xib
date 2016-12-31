@@ -66,13 +66,13 @@
                     <constraint firstItem="Xw2-fh-xha" firstAttribute="trailing" secondItem="dqf-O3-MX9" secondAttribute="trailing" id="bzX-Z7-dZd"/>
                     <constraint firstItem="Xw2-fh-xha" firstAttribute="top" secondItem="4WP-yx-24e" secondAttribute="topMargin" constant="-1" id="frb-ie-cs0"/>
                     <constraint firstAttribute="bottomMargin" secondItem="dqf-O3-MX9" secondAttribute="bottom" constant="10.5" id="hk1-oy-tsE"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="PUo-BZ-mb5" secondAttribute="bottom" constant="6.5" id="lc3-DU-lf2"/>
                     <constraint firstItem="PUo-BZ-mb5" firstAttribute="top" secondItem="4WP-yx-24e" secondAttribute="topMargin" constant="7" id="rdj-mK-j17"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="dqf-O3-MX9" id="Top-QA-fAX"/>
                 <outlet property="dayLabel" destination="Xw2-fh-xha" id="uya-5e-Ot2"/>
+                <outlet property="expenseCell" destination="PUo-BZ-mb5" id="N6O-LW-OXX"/>
                 <outlet property="timeLabel" destination="Ft1-ig-5Ag" id="hOD-M7-hQb"/>
             </connections>
             <point key="canvasLocation" x="-111" y="383"/>

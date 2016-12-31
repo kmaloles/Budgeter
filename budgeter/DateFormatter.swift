@@ -13,14 +13,13 @@ class DateFormatter {
     
     let serverTimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     let serverTimeFormat2 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-    // our backend can send dates in both formats listed above. To parse date from the backend carefully, we support both. Don't delete any of that pls.
-    
     
     let localTimeFormat = "EEE\nMMM dd\nh:mm a"
     let localTimeFormatToday = "MMM dd\nh:mm a"
     let timeFormatDayOfWeek = "EEE"
     let timeFormatDayOfMonth = "MMM dd"
     let timeFormatTimeOfDay = "h:mm a"
+    let idFormat = "yyyyMMddHHmmss"
     
     let todayString = "Today"
     
@@ -31,6 +30,7 @@ class DateFormatter {
     let localDateFormatterDayOfWeek = NSDateFormatter()
     let localDateFormatterDayOfMonth = NSDateFormatter()
     let localDateFormatterTimeOfDay = NSDateFormatter()
+    let idFormatter = NSDateFormatter()
     
     
     static let sharedInstance = DateFormatter()
@@ -46,6 +46,7 @@ class DateFormatter {
         localDateFormatterDayOfWeek.dateFormat = timeFormatDayOfWeek
         localDateFormatterDayOfMonth.dateFormat = timeFormatDayOfMonth
         localDateFormatterTimeOfDay.dateFormat = timeFormatTimeOfDay
+        idFormatter.dateFormat = idFormat
         
         serverDateFormatter.timeZone = utcTimezone
         serverDateFormatter2.timeZone = utcTimezone
@@ -71,36 +72,33 @@ class DateFormatter {
         return nil
     }
     
-//    func getDate(event: Event?) -> NSDate? {
-//        if event != nil && event?.date != nil {
-//            return getDate(event?.date)
-//        }
-//        return nil
-//    }
-//    
-//    func getDayOfWeekFromDate(date: NSDate) -> String {
-//        return localDateFormatterDayOfWeek.stringFromDate(date)
-//    }
-//    
-//    func getDayOfMonthFromDate(date: NSDate) -> String {
-//        return localDateFormatterDayOfMonth.stringFromDate(date)
-//    }
-//    
-//    func getTimeOfDayFromDate(date: NSDate) -> String {
-//        return localDateFormatterTimeOfDay.stringFromDate(date)
-//    }
-//    
-//    func isDateToday(date: NSDate) -> Bool {
-//        let cal = NSCalendar.currentCalendar()
-//        var components = cal.components([.Era, .Year, .Month, .Day], fromDate:NSDate())
-//        let today = cal.dateFromComponents(components)!
-//        
-//        components = cal.components([.Era, .Year, .Month, .Day], fromDate: date);
-//        let otherDate = cal.dateFromComponents(components)!
-//        
-//        return today.isEqualToDate(otherDate)
-//    }
-//    
+    func getDayOfWeekFromDate(date: NSDate) -> String {
+        return localDateFormatterDayOfWeek.stringFromDate(date)
+    }
+    
+    func getDayOfMonthFromDate(date: NSDate) -> String {
+        return localDateFormatterDayOfMonth.stringFromDate(date)
+    }
+    
+    func getTimeOfDayFromDate(date: NSDate) -> String {
+        return localDateFormatterTimeOfDay.stringFromDate(date)
+    }
+    
+    func getIdFromDate (date: NSDate) -> String {
+        return idFormatter.stringFromDate(date)
+    }
+    
+    func isDateToday(date: NSDate) -> Bool {
+        let cal = NSCalendar.currentCalendar()
+        var components = cal.components([.Era, .Year, .Month, .Day], fromDate:NSDate())
+        let today = cal.dateFromComponents(components)!
+        
+        components = cal.components([.Era, .Year, .Month, .Day], fromDate: date);
+        let otherDate = cal.dateFromComponents(components)!
+        
+        return today.isEqualToDate(otherDate)
+    }
+//
 //    func getCurrentTime() -> String {
 //        let now = moment() /* (now) */
 //        let date: NSDate = NSDate.init(timeIntervalSince1970: now.epoch())
@@ -123,7 +121,7 @@ class DateFormatter {
 //    func getDateStringForList(event: Event?) -> String {
 //        let date = getDate(event)
 //        if let date = date {
-//            let cal = NSCalendar.currentCalendar()
+//            let cal = NSCalendar.currentCalendar()1
 //            var components = cal.components([.Era, .Year, .Month, .Day], fromDate:NSDate())
 //            let today = cal.dateFromComponents(components)!
 //            
