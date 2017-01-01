@@ -63,6 +63,10 @@
 		3CAAC4ED1E0C85440015345B /* ExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
 		3CAAC4F01E0C87110015345B /* ExpenseTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseTableCell.xib; sourceTree = "<group>"; };
 		3CD835B11E0C490600A2D319 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		3CF210761E18B9AE00047EAA /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
+		3CF210771E18B9BE00047EAA /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		3CF210781E18BA4D00047EAA /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.otf"; path = "../../../Downloads/montserrat/Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		3CF210791E18BA4D00047EAA /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.otf"; path = "../../../Downloads/montserrat/Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		A2226B13662D2D22E51B2830 /* Pods-budgeter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-budgeter.release.xcconfig"; path = "Pods/Target Support Files/Pods-budgeter/Pods-budgeter.release.xcconfig"; sourceTree = "<group>"; };
 		E7F82B2B1EDEC0CBDEE30BCE /* Pods_budgeter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_budgeter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +108,10 @@
 		3C0B0A361E11B93D007FE881 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CF210781E18BA4D00047EAA /* Montserrat-Regular.otf */,
+				3CF210791E18BA4D00047EAA /* Montserrat-SemiBold.otf */,
+				3CF210771E18B9BE00047EAA /* Montserrat-Light.otf */,
+				3CF210761E18B9AE00047EAA /* Montserrat-Hairline.otf */,
 				3C0B0A371E11B98D007FE881 /* norwester.otf */,
 			);
 			name = resources;

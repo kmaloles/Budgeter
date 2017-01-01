@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Expense: Object {
-    dynamic var id = 0
+    dynamic var id = ""
     dynamic var expense = 0
     dynamic var date = NSDate()
     

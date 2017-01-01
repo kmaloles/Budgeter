@@ -22,20 +22,29 @@ class ExpenseCellConfigurator {
     
     let dateFormatter = DateFormatter.sharedInstance
     
+//    func configure(expenseItem: Expense, cell: ExpenseTableCell){
+//        cell.expenseCell.text = "PHP " + String(expenseItem.expense)
+//        let date = expenseItem.date
+//        
+//        let isToday = dateFormatter.isDateToday(date)
+//        if isToday {
+//            cell.dateLabel.hidden = true
+//            cell.dayLabel.text = "Today"
+//        } else {
+//            cell.dateLabel.hidden = false
+//            cell.dayLabel.text = dateFormatter.getDayOfWeekFromDate(date).uppercaseString
+//            cell.dateLabel.text = dateFormatter.getDayOfMonthFromDate(date)
+//        }
+//        cell.timeLabel.text = dateFormatter.getTimeOfDayFromDate(date)
+//        
+//    }
+//    
     func configure(expenseItem: Expense, cell: ExpenseTableCell){
-        cell.expenseCell.text = "PHP " + String(expenseItem.expense)
+        cell.expenseCell.text = "₱ " + String(expenseItem.expense)
         let date = expenseItem.date
-        
-        let isToday = dateFormatter.isDateToday(date)
-        if isToday {
-            cell.dateLabel.hidden = true
-            cell.dayLabel.text = "Today"
-        } else {
-            cell.dateLabel.hidden = false
-            cell.dayLabel.text = dateFormatter.getDayOfWeekFromDate(date).uppercaseString
-            cell.dateLabel.text = dateFormatter.getDayOfMonthFromDate(date)
-        }
-        cell.timeLabel.text = dateFormatter.getTimeOfDayFromDate(date)
+        cell.timeLabel.hidden = true
+        cell.dayLabel.hidden = true
+        cell.dateLabel.text = dateFormatter.getTimeOfDayFromDate(date)
         
     }
 }

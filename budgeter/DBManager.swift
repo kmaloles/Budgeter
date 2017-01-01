@@ -30,8 +30,8 @@ class DBManager {
         
     }
     
-    func getYearMonDD(date: NSDate) -> Int {
-        return Int(self.dateFormatter.getIdFromDate(date))!
+    func getYearMonDD(date: NSDate) -> String {
+        return self.dateFormatter.getIdFromDate(date)
     }
     
     func getAllExpenses() -> Results<Expense> {
@@ -40,5 +40,30 @@ class DBManager {
     
     func countExpenses() -> Int {
         return realm.objects(Expense).count
+    }
+    
+    func getDateSections() -> [String] {
+        var dateSections = [String]()
+        let result = getAllExpenses()
+        for expense in result {
+            dateSections.append(expense.id.subString(0, length: 8))
+        }
+        return Array(Set(dateSections)).sort({$0 > $1})
+    }
+    
+    func getExpensesForSection(section: String) -> Results<Expense> {
+        let predicate = NSPredicate(format: "id CONTAINS %@", section)
+        return realm.objects(Expense).filter(predicate).sorted("id", ascending: false)
+    }
+    
+    func deleteMyExpense(indexPath: NSIndexPath){
+        let sections = getDateSections()
+        let expensesForSection = getExpensesForSection(sections[indexPath.section])
+        let expenseToDelete = expensesForSection[indexPath.row]
+        print("Deleting \(expenseToDelete)")
+        try! realm.write() {
+            realm.delete(expenseToDelete)
+        }
+        
     }
 }

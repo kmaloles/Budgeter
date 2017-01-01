@@ -13,6 +13,7 @@ class DateFormatter {
     
     let serverTimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     let serverTimeFormat2 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    let sectionTimeFormat = "yyyyMMdd"
     
     let localTimeFormat = "EEE\nMMM dd\nh:mm a"
     let localTimeFormatToday = "MMM dd\nh:mm a"
@@ -25,6 +26,7 @@ class DateFormatter {
     
     let serverDateFormatter = NSDateFormatter()
     let serverDateFormatter2 = NSDateFormatter()
+    let sectionTimeFormatter = NSDateFormatter()
     let localDateFormatter = NSDateFormatter()
     let localDateFormatterToday = NSDateFormatter()
     let localDateFormatterDayOfWeek = NSDateFormatter()
@@ -41,6 +43,7 @@ class DateFormatter {
         
         serverDateFormatter.dateFormat = serverTimeFormat
         serverDateFormatter2.dateFormat = serverTimeFormat2
+        sectionTimeFormatter.dateFormat = sectionTimeFormat
         localDateFormatter.dateFormat = localTimeFormat
         localDateFormatterToday.dateFormat = localTimeFormatToday
         localDateFormatterDayOfWeek.dateFormat = timeFormatDayOfWeek
@@ -70,6 +73,20 @@ class DateFormatter {
             return result
         }
         return nil
+    }
+    
+    func getDateForSection(date: String) -> NSDate? {
+        return sectionTimeFormatter.dateFromString(date)
+    }
+    
+    func getHeaderTitleFromDate(date: NSDate) -> String {
+        var headerFinal = ""
+        if isDateToday(date){
+            headerFinal = "Today"
+        }else{
+            headerFinal = getDayOfWeekFromDate(date) + " " + getDayOfMonthFromDate(date)
+        }
+        return headerFinal
     }
     
     func getDayOfWeekFromDate(date: NSDate) -> String {
